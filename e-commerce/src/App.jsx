@@ -16,12 +16,18 @@ import {
 const App = () => {
   return (
     <Router>
+      <Navbar />
+      <Sidebar />
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/about' element={<About />}></Route>
         <Route path='/cart' element={<Cart />}></Route>
         <Route path='/products' element={<Products />}></Route>
+        <Route path='products/:Id' element={<SingleProduct />} />
+        <Route path='checkout' element={<Checkout />} />
+        <Route path='*' element={<Error />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
